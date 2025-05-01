@@ -8,16 +8,85 @@
     <link rel="stylesheet" href="index.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<style>
+    #Wallpaper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #Wallpaper img {
+        width: 48%;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    #Wallpaper img:hover {
+        transform: scale(1.03);
+    }
+
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        flex-direction: column;
+    }
+
+    .modal img {
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 8px;
+    }
+
+    .modal button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+</style>
 
 <body>
 
     <div class="bg-black min-h-screen px-8">
-        <div class="flex items-center gap-14">
+        <div class="flex items-center gap-8">
             <img src="img/back.png" alt="" class="w-[40px] h-[40px] cursor-pointer" onclick="window.history.back()">
-            <h1 class="text-[23px] font-bold text-center p-10 text-white">FFF Wallpaper</h1>
+            <h1 class="text-[22px] font-bold text-center p-10 text-white">FFF Wallpaper</h1>
+        </div>
+
+        <div class="w-fil flex flex-wrap items-center gap-2 justify-between" id="Wallpaper">
+
         </div>
 
     </div>
+
+    <div class="modal" id="imageModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Fullscreen">
+        <a id="downloadBtn" href="#" download>
+            <button class="bg-white">Download Image</button>
+        </a>
+    </div>
+    <script src="scrip.js"></script>
 </body>
 
 </html>
