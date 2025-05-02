@@ -32,7 +32,7 @@
 
 <body class="bg-black">
 
-    <div class="bg-black min-h-screen px-8">
+    <div class="bg-black min-h-screen px-8" id="blur">
         <div class="flex items-center gap-14">
             <img src="img/back.png" alt="" class="w-[40px] h-[40px] cursor-pointer" onclick="window.history.back()">
             <h1 class="text-[23px] font-bold text-center p-10 text-white">Pets</h1>
@@ -93,6 +93,17 @@
 
 
         </div>
+    </div>
+    <div class="absolute w-[100%] h-[500px] bottom-1 bg-black  hidden z-40 left-0 px-3" id="AD_class1">
+        <div class="w-full h-full border border-white rounded-xl px-4">
+            <div class="flex items-center justify-between ">
+                <span class="close text-white text-[40px] " onclick="loadAd()">&times;</span>
+                <p class="text-red-700 font-medium">AD</p>
+            </div>
+
+        </div>
+    </div>
+    <script src="adsctip.js"></script>
 </body>
 
 </html>

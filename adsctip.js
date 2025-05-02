@@ -28,14 +28,18 @@ function loadAd() {
 //     localStorage.setItem("adclicks", chak);
 
 // });
-// let adContainer = document.querySelector("#AD_class1 span").addEventListener("click", () => {
-//     chak - 1
-//     localStorage.setItem("adclicks", chak);
+const pageKey = 'index_visits';
+let visits = localStorage.getItem(pageKey) || 0;
+visits = parseInt(visits) + 1;
+localStorage.setItem(pageKey, visits);
 
-// })
-let i = 1;
-let main = document.querySelector(".main")
-main.addEventListener("click", () => {
-    let localstorage = localStorage.setItem("adclicks", i);
-    i++;
-})
+if (visits == 3) {
+    let adContainer = document.getElementById("AD_class1");
+    adContainer.style.display = "block";
+    blur.style.filter = "blur(5px)";
+
+} else if (visits == 4) {
+    visits = 1
+    localStorage.setItem(pageKey, visits);
+
+}
