@@ -22,7 +22,35 @@
         <div class="flex items-center justify-center">
             <a href="#" class=""><img src="img/page5_1_2/nexterra.webp" alt="" class="w-full"></a>
         </div>
-        <button class="bg-white w-[85%] h-14 rounded-xl absolute bottom-6 font-medium text-[20px]">Apply now</button>
+        <button class="bg-white w-[85%] h-14 rounded-xl absolute bottom-6 font-medium text-[20px]"
+            onclick="addshow()" id="blur">Apply now</button>
+
+        <div class="absolute w-[100%] h-[500px] top-9 bg-black hidden  z-40 left-0 px-7" id="AD_class1">
+            <span class="close text-white text-[40px] relative left-72 z-50" onclick="loadAd()">&times;</span>
+            <div id="AD_class" class="w-[100%] h-full border border-red-800 mt-3 block">
+            </div>
+        </div>
+
+    </div>
+    <script>
+        let blur = document.getElementById("blur");
+
+        function loadAd() {
+            console.log("this is a test");
+            let adContainer = document.getElementById("AD_class1");
+            adContainer.style.display = "none";
+            blur.style.filter = "blur(0px)";
+
+
+        }
+        function addshow() {
+            let adContainer = document.getElementById("AD_class1");
+            adContainer.style.display = "block";
+            blur.style.filter = "blur(5px)";
+
+        }
+
+    </script>
 
 </body>
 
