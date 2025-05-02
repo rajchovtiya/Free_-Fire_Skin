@@ -11,7 +11,7 @@
 
 <body>
 
-    <div class="bg-black h-screen px-8">
+    <div class="bg-black main-h-screen px-8 pb-7">
         <div class="flex items-center gap-6">
             <img src="img/back.png" alt="" class="w-[40px] h-[40px] cursor-pointer" onclick="window.history.back()">
             <h1 class="text-[23px] font-bold text-center p-10 text-white">FFF Skin Tool</h1>
@@ -28,12 +28,27 @@
                 Started</a>
 
             <div class="flex items-center justify-between gap-4 mt-2">
-                <a href="" class="w-[47%]"><img src="img/page3/share.png" alt="" class="w-full"></a>
+                <a href="" class="w-[47%]"><img src="img/page3/share.png" alt="" class="w-full" onclick="sharePage()"></a>
                 <a href="fffskinchar.html" class="w-[47%]"><img src="img/page3/privacy.png" alt="" class="w-full"></a>
             </div>
         </div>
 
     </div>
+    <script>
+        function sharePage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    text: "Check out this page!",
+                    url: window.location.href
+                })
+                    .then(() => console.log('Shared successfully'))
+                    .catch((error) => console.error('Sharing failed', error));
+            } else {
+                alert("Web Share not supported on this browser.");
+            }
+        }
+    </script>
 </body>
 
 </html>
