@@ -16,20 +16,20 @@
             <img src="img/back.png" alt="" class="w-[40px] h-[40px] cursor-pointer" onclick="window.history.back()">
             <h1 class="text-[23px] font-bold text-center p-10 text-white">Character</h1>
         </div>
-        <div class="flex flex-wrap items-center justify-between gap-4 pb-5">
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-5" id="characters">
 
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_weapons/CG15.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_weapons/FAMAS.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_weapons/M14.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_weapons/MAG-7.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_weapons/PLASMA.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_weapons/PLASMA.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_weapons/SVD.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_weapons/Vector.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_weapons/Woodpecker.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_weapons/Woodpecker.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_weapons/PLASMA.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_weapons/XMB.png" alt="" class="w-full"></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_weapons/CG15.png" alt="" class="w-full" name="RG550" title="Complete the online application with your personal and financial details."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_weapons/FAMAS.png" alt="" class="w-full" name="CG15" title="To calculate your home loan EMI manually, use the following formula:"></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_weapons/M14.png" alt="" class="w-full" name="SVD" title="However, this formula can be complex and time-consuming to calculate manually."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_weapons/MAG-7.png" alt="" class="w-full" name="XM8" title=" To simplify the process, you can use an online home loan EMI calculator to instantly calculate your EMI based"></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_weapons/PLASMA.png" alt="" class="w-full" name="FAMAS" title="Complete the online application with your personal and financial details."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_weapons/PLASMA.png" alt="" class="w-full" name="MP40" title="To calculate your home loan EMI manually, use the following formula:"></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_weapons/SVD.png" alt="" class="w-full" name="M14" title="Home loan interest rates are typically calculated using the monthly reducing balance method."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_weapons/Vector.png" alt="" class="w-full" name="VSS" title="which decreases as the principal is paid down over time."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_weapons/Woodpecker.png" alt="" class="w-full" name="Thompson" title="To calculate your home loan EMI manually, use the following formula:"></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_weapons/Woodpecker.png" alt="" class="w-full" name="PLASMA" title=". Find the best interest rates, processing fees, and loan tenures to suit your needs."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_weapons/PLASMA.png" alt="" class="w-full" name="AUG" title="Complete the online application with your personal and financial details."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_weapons/XMB.png" alt="" class="w-full" name="Woodpecker" title="Complete the online application with your personal and financial details."></a>
         </div>
 
     </div>
@@ -42,6 +42,24 @@
 
         </div>
     </div>
+
+    <script>
+        let characters = document.querySelectorAll("#characters a img");
+
+        characters.forEach((element) => {
+            element.addEventListener("click", (e) => {
+                let name = e.target.getAttribute("name");
+                let title = e.target.getAttribute("title");
+                let url = e.target.getAttribute("src");
+
+                // Store values in localStorage
+                localStorage.setItem("char_name", name);
+                localStorage.setItem("char_title", title);
+                localStorage.setItem("char_url", url);
+            });
+        });
+    </script>
+
     <script src="adsctip.js"></script>
 </body>
 

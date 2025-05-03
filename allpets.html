@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weapon</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    #characters {
+        position: absolute;
+        left: 0;
+        animation: fadeIn 8s linear infinite;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+
+
+
+
+    }
+</style>
+
+<body class="bg-black">
+
+    <div class="bg-black min-h-screen px-8 py-4" id="blur">
+        <div class="flex items-center gap-1">
+            <img src="img/back.png" alt="" class="w-[40px] h-[40px] cursor-pointer" onclick="window.history.back()">
+            <h1 class="text-[17px] font-bold text-center p-10 text-white" id="names">Dr.Beanie</h1>
+        </div>
+
+        <div class="flex items-center justify-center">
+            <a href="#" class="w-[50%]"><img src="" alt="" class="w-full">
+                <img src="img/page5_1_4_pets/drbeanie.png" alt="" id="img">
+            </a>
+        </div>
+
+        <div
+            class="flex items-center justify-between flex-wrap gap-4 mt-9 text-gray-400 bg-[#111111] text-[15px] px-2 rounded-xl py-1 line-clamp-1">
+            <p id="text">To calculate your home loan EMI manually, use the following formula:</p>
+        </div>
+        <div class="flex items-end justify-center absolute bottom-3 w-full left-0">
+            <button class="bg-white w-[85%] h-14 rounded-xl relative   font-medium text-[20px] z-0" onclick="addshow()"
+                id="blur">Apply now</button>
+        </div>
+
+
+    </div>
+    <div class="absolute w-[100%] h-[500px] bottom-1 bg-black hidden  z-40 left-0 px-3" id="AD_class1">
+        <div class="w-full h-full border border-white rounded-xl px-4">
+            <div class="flex items-center justify-between ">
+                <span class="close text-white text-[40px] " onclick="loadAd()">&times;</span>
+                <p class="text-red-700 font-medium">AD</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        let blur = document.getElementById("blur");
+
+        function loadAd() {
+            console.log("this is a test");
+            let adContainer = document.getElementById("AD_class1");
+            adContainer.style.display = "none";
+            blur.style.filter = "blur(0px)";
+            setTimeout(() => {
+                alert("this will be apply to your account whitin 48 hours");
+            }, 300);
+
+
+        }
+        function addshow() {
+            let adContainer = document.getElementById("AD_class1");
+            adContainer.style.display = "block";
+            blur.style.filter = "blur(5px)";
+
+
+
+        }
+
+        let name = localStorage.getItem("char_name");
+        let title = localStorage.getItem("char_title");
+        let url = localStorage.getItem("char_url");
+        let text = document.getElementById("text")
+        let img = document.getElementById("img")
+        let names = document.getElementById("names")
+        names.innerText = name
+        img.src = url
+
+        text.innerText = title
+
+    </script>
+    <script src="adsctip.js"></script>
+</body>
+
+</html>

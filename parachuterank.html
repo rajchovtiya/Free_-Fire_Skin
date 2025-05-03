@@ -16,20 +16,48 @@
             <img src="img/back.png" alt="" class="w-[40px] h-[40px] cursor-pointer" onclick="window.history.back()">
             <h1 class="text-[23px] font-bold text-center p-10 text-white">Parachute</h1>
         </div>
-        <div class="flex flex-wrap items-center justify-between gap-4 pb-5">
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-5 " id="characters">
 
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_parachute/WTDP.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_parachute/WFP.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_parachute/SP.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_parachute/DGFP.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_parachute/DAP.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_parachute/HHBP.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_parachute/EHP.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_parachute/MUP.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_parachute/EDP.png" alt="" class="w-full"></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_parachute/WTDP.png" alt="" class="w-full"
+                    name="Wings of the Devil parachute"
+                    title="Compare interest rates from various banks to find the best deal."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_parachute/WFP.png" alt="" class="w-full"
+                    name="Wasteland Frontier parachute"
+                    title="Choose a repayment period that fits your budget and needs."></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_parachute/SP.png" alt="" class="w-full"
+                    name="Paraachute Maniacs" title=" Get quick approvals and fast disbursal of the loan amount."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_parachute/DGFP.png" alt="" class="w-full"
+                    name="Superstar parachute" title="Most car loans are unsecured, making the process simpler."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_parachute/DAP.png" alt="" class="w-full"
+                    name="Draco's Green parachute"
+                    title="Opt for a loan with flexible EMIs that suit your monthly budget."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_parachute/HHBP.png" alt="" class="w-full"
+                    name="Hip Hop Bundle parachute"
+                    title="Compare car loan schemes from top banks in India, including"></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_parachute/EHP.png" alt="" class="w-full"
+                    name="Elite Hayato parachute" title="Ensure you meet the eligibility criteria set by the bank."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_parachute/MUP.png" alt="" class="w-full"
+                    name="Superstar parachute" title="Choose a repayment period that fits your budget and needs."></a>
         </div>
 
     </div>
+    <script>
+        let characters = document.querySelectorAll("#characters a img");
+
+        characters.forEach((element) => {
+            element.addEventListener("click", (e) => {
+                let name = e.target.getAttribute("name");
+                let title = e.target.getAttribute("title");
+                let url = e.target.getAttribute("src");
+
+                // Store values in localStorage
+                localStorage.setItem("char_name", name);
+                localStorage.setItem("char_title", title);
+                localStorage.setItem("char_url", url);
+            });
+        });
+    </script>
+
 </body>
 
 </html>

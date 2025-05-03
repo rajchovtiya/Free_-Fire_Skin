@@ -16,19 +16,35 @@
             <img src="img/back.png" alt="" class="w-[40px] h-[40px] cursor-pointer" onclick="window.history.back()">
             <h1 class="text-[23px] font-bold text-center p-10 text-white">Emote</h1>
         </div>
-        <div class="flex flex-wrap items-center justify-between gap-4 pb-5">
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-5" id="characters">
 
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_emotes/fortnite.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_emotes/lunar.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_emotes/hotstuff.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_emotes/fingerwag.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_emotes/respect.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_emotes/micdrop.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_emotes/introducing.png" alt="" class="w-full"></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_emotes/fortnite.png" alt="" class="w-full" name="Frotnite Dance" title="Once approved, the loan amount is disbursed directly to your bank account."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_emotes/lunar.png" alt="" class="w-full" name="Lunar Paraty" title="Designed for business expenses, expansion, or capital investment, available in various forms like SBA loans and lines of credit."></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_emotes/hotstuff.png" alt="" class="w-full" name="Hot Stuff" title="Covers medical expenses, including preventive care, emergencies, and specialist visits."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_emotes/fingerwag.png" alt="" class="w-full" name="Finger Wag" title="Protects your property and belongings from risks like fire, theft, or natural disasters."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_emotes/micdrop.png" alt="" class="w-full" name="Respect" title="Ensure you meet the eligibility criteria set by the bank."></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_emotes/introducing.png" alt="" class="w-full" name="Mic Drop" title="Most car loans are unsecured, making the process simpler."></a>
 
         </div>
 
     </div>
+
+    <script>
+        let characters = document.querySelectorAll("#characters a img");
+
+        characters.forEach((element) => {
+            element.addEventListener("click", (e) => {
+                let name = e.target.getAttribute("name");
+                let title = e.target.getAttribute("title");
+                let url = e.target.getAttribute("src");
+
+                // Store values in localStorage
+                localStorage.setItem("char_name", name);
+                localStorage.setItem("char_title", title);
+                localStorage.setItem("char_url", url);
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -16,20 +16,23 @@
             <img src="img/back.png" alt="" class="w-[40px] h-[40px] cursor-pointer" onclick="window.history.back()">
             <h1 class="text-[23px] font-bold text-center p-10 text-white">Character</h1>
         </div>
-        <div class="flex flex-wrap items-center justify-between gap-4 pb-5">
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-5" id="characters">
 
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_chars/sonia.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_chars/ryden.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_chars/lgnis.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_chars/orion.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_chars/santonio.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_chars/kenta.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_chars/otho.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_chars/nairi.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_chars/dimitri.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_chars/maro.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_chars/skyler.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_chars/steffie.png" alt="" class="w-full"></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_chars/sonia.png" alt="" class="w-full"
+                    name="sonia" title="Compare interest rates from various banks to find the best deal."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_chars/ryden.png" alt="" class="w-full" name="Ryden" title="Provide basic documents like ID proof, address proof, and income proof."></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_chars/lgnis.png" alt="" class="w-full" name="Lgnis" title="Complete the online application with your personal and financial details."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_chars/orion.png" alt="" class="w-full" name="Orion" title=". Find the best interest rates, processing fees, and loan tenures to suit your needs."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_chars/santonio.png" alt=""
+                    class="w-full"></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_chars/kenta.png" alt="" class="w-full" name="Santonio" title="Ensure you meet the eligibility criteria set by the bank."></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_chars/otho.png" alt="" class="w-full" name="Homer" title="Get quick approvals and fast disbursal of the loan amount."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_chars/nairi.png" alt="" class="w-full" name="Kenta" title="Compare interest rates from various banks to find the best deal."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_chars/dimitri.png" alt=""
+                    class="w-full" name="Otho" title="Ensure you meet the eligibility criteria set by the bank."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_chars/maro.png" alt="" class="w-full" name="Nairi" title="Opt for a loan with flexible EMIs that suit your monthly budget."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_chars/skyler.png" alt="" class="w-full" name="Dimitri" title="Get quick approvals and fast disbursal of the loan amount."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_chars/steffie.png" alt=""class="w-full" name="Maro" title="Compare interest rates from various banks to find the best deal."></a>
         </div>
 
     </div>
@@ -42,6 +45,23 @@
 
         </div>
     </div>
+    <script>
+        let characters = document.querySelectorAll("#characters a img");
+
+        characters.forEach((element) => {
+            element.addEventListener("click", (e) => {
+                let name = e.target.getAttribute("name");
+                let title = e.target.getAttribute("title");
+                let url = e.target.getAttribute("src");
+
+                // Store values in localStorage
+                localStorage.setItem("char_name", name);
+                localStorage.setItem("char_title", title);
+                localStorage.setItem("char_url", url);
+            });
+        });
+    </script>
+
     <script src="adsctip.js"></script>
 </body>
 

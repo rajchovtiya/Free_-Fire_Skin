@@ -16,21 +16,36 @@
             <img src="img/back.png" alt="" class="w-[40px] h-[40px] cursor-pointer" onclick="window.history.back()">
             <h1 class="text-[23px] font-bold text-center p-10 text-white">Bundle</h1>
         </div>
-        <div class="flex flex-wrap items-center justify-between gap-4 pb-5">
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-5" id="characters">
 
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_bundle/blue.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_bundle/hiphop.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_bundle/skater.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_bundle/sakura.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_bundle/green.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_bundle/rampage.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_bundle/cobrarage.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_bundle/cyber.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_bundle/shadowred.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_bundle/golden.png" alt="" class="w-full"></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_bundle/blue.png" alt="" class="w-full" name="Blue Dinos" title="Protects your property and belongings from risks like fire, theft, or natural disasters."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_bundle/hiphop.png" alt="" class="w-full" name="Hip Hop" title="Designed for business expenses, expansion, or capital investment, available in various forms like SBA loans and lines of credit."></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_bundle/skater.png" alt="" class="w-full" name="Skater Boy" title="Once approved, the loan amount is disbursed directly to your bank account."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_bundle/sakura.png" alt="" class="w-full" name="Sakura" title="Compare car loan schemes from top banks in India, including"></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_bundle/green.png" alt="" class="w-full" name="Green Criminal" title="Offers coverage for vehicle accidents, liability, and damages."></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_bundle/rampage.png" alt="" class="w-full" name="Rampage United" title="Replaces a portion of income if you're unable to work due to illness or injury."></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_bundle/cobrarage.png" alt="" class="w-full" name="Cobra Rage" title="Fast and Easy Application – Apply for a loan online in just a few minutes."></a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_bundle/cyber.png" alt="" class="w-full" name="Cyber Blast" title="We help you get your loan approved fast, so you can get the money when you need it."></a>
         </div>
 
     </div>
+    <script>
+        let characters = document.querySelectorAll("#characters a img");
+
+        characters.forEach((element) => {
+            element.addEventListener("click", (e) => {
+                let name = e.target.getAttribute("name");
+                let title = e.target.getAttribute("title");
+                let url = e.target.getAttribute("src");
+
+                // Store values in localStorage
+                localStorage.setItem("char_name", name);
+                localStorage.setItem("char_title", title);
+                localStorage.setItem("char_url", url);
+            });
+        });
+    </script>
+
 </body>
 
 </html>

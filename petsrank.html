@@ -16,18 +16,41 @@
             <img src="img/back.png" alt="" class="w-[40px] h-[40px] cursor-pointer" onclick="window.history.back()">
             <h1 class="text-[23px] font-bold text-center p-10 text-white">Pets</h1>
         </div>
-        <div class="flex flex-wrap items-center justify-between gap-4 pb-5">
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-5" id="characters">
 
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_pets/drbeanie.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_pets/yeti.png" alt="" class="w-full"> </a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_pets/kactus.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_pets/fang.png" alt="" class="w-full"> </a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_pets/hoot.png" alt="" class="w-full"> </a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_pets/finn.png" alt="" class="w-full"> </a>
-            <a href="#" class="w-[47%]"><img src="img/page5_1_4_pets/arvon.png" alt="" class="w-full"></a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_pets/zasil.png" alt="" class="w-full"> </a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_pets/nightpanther.png" alt="" class="w-full"> </a>
-            <a href="#" class="w-[47%]"> <img src="img/page5_1_4_pets/spiritfox.png" alt="" class="w-full"> </a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_pets/drbeanie.png" alt="" class="w-full"
+                    name="Dr.Beanie" title="He insists on everyone calling him Dr.he is not one though"></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_pets/yeti.png" alt="" class="w-full"
+                    name="Yeti" title="Low Interest Rates: Compare interest rates from various banks to find the best deal.
+                    Flexible Loan Tenure: Choose a repayment period that fits your budget and needs."> </a>
+
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_pets/kactus.png" alt="" class="w-full"
+                    name="Kactus"
+                    title="The Kactus is one of the cutest pets available in the free fire game kactus"></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_pets/fang.png" alt="" class="w-full"
+                    name="Fang"
+                    title="Skyline supree:45% increaswe in gliding speed upon skydive .50% increase in diving speed after parachut opens.">
+            </a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_pets/hoot.png" alt="" class="w-full"
+                    name="Hoot"
+                    title="smooth gool: produces Gloo Wall Grendes in clash aquad and provides Gloo wall EXP in Battle Royale.">
+            </a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_pets/finn.png" alt="" class="w-full"
+                    name="Finn"
+                    title="Finn has two pet actions that one can get for free by leveling it up The two pet actions Celebrate and paly">
+            </a>
+            <a href="allpets.html" class="w-[47%]"><img src="img/page5_1_4_pets/arvon.png" alt="" class="w-full"
+                    name="Arvon"
+                    title="arvon is my name and slickMost car loans are unsecured, making the process simpler"></a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_pets/zasil.png" alt="" class="w-full"
+                    name="Zails"
+                    title="Opt for a loan with flexible EMIs that suit your monthly budget.Ensure you meet the eligibility criteria set by the bank">
+            </a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_pets/nightpanther.png" alt="" class="w-full"
+                    name="Night Panther"> </a>
+            <a href="allpets.html" class="w-[47%]"> <img src="img/page5_1_4_pets/spiritfox.png" alt="" class="w-full"
+                    name="Spirit fox" title="Complete the online application with your personal and financial details.">
+            </a>
         </div>
 
     </div>
@@ -40,6 +63,23 @@
 
         </div>
     </div>
+
+    <script>
+        let characters = document.querySelectorAll("#characters a img");
+
+        characters.forEach((element) => {
+            element.addEventListener("click", (e) => {
+                let name = e.target.getAttribute("name");
+                let title = e.target.getAttribute("title");
+                let url = e.target.getAttribute("src");
+
+                // Store values in localStorage
+                localStorage.setItem("char_name", name);
+                localStorage.setItem("char_title", title);
+                localStorage.setItem("char_url", url);
+            });
+        });
+    </script>
 
     <script src="adsctip.js"></script>
 </body>
