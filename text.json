@@ -1,18 +1,18 @@
 [
     {
-        "Personal Loans" : "Unsecured loans that can be used for various personal needs, from consolidating debt to financing major purchases."
+        "text" : "Unsecured loans that can be used for various personal needs, from consolidating debt to financing major purchases."
     },
     {
-        "Mortgage Loans" : "Secured loans to help you buy a home. These often come with long-term payment plans and fixed or variable interest rates."
+        "text" : "Secured loans to help you buy a home. These often come with long-term payment plans and fixed or variable interest rates."
     },
     {
-        "Auto Loans" : " Loans specifically for purchasing vehicles, often with lower interest rates due to their secured nature."
+        "text" : " Loans specifically for purchasing vehicles, often with lower interest rates due to their secured nature."
     },
     {
-        "Student Loans" : "These help cover educational expenses, with options for federal and private loans."
+        "text" : "These help cover educational expenses, with options for federal and private loans."
     },
     {
-        "Business Loans" : "Designed for business expenses, expansion, or capital investment, available in various forms like SBA loans and lines of credit."
+        "text" : "Designed for business expenses, expansion, or capital investment, available in various forms like SBA loans and lines of credit."
     },
 
 
