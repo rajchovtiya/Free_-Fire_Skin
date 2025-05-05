@@ -32,7 +32,7 @@
 
 <body class="bg-black">
 
-    <div class="bg-black px-8" id="blur">
+    <div class="bg-black px-2" id="blur">
         <div class="flex items-center gap-14">
             <img src="img/back.png" alt="" class="w-[40px] h-[40px] cursor-pointer" onclick="window.history.back()">
             <h1 class="text-[23px] font-bold text-center p-10 text-white">Characters</h1>
@@ -231,56 +231,51 @@
         </p>
     </div>
 
-<<<<<<< HEAD
-    <!-- ----- box ---- alert -->
-    <div class=" hidden alert_box h-[150px] absolute  top-[50%] text-center w-full z-50 bg-black border border-white rounded-xl p-5  pr-10 left-0 right-0 mx-auto ">
-        <p class="text-gray-400 h-full flex items-center justify-center"> this will be apply to your account whitin 48 hours </p>
-        <span class="close text-white text-[35px] absolute top-[-10%] right-[2%] cursor-pointer"
-             onclick="alertshow()">&times;</span>
-    </div>        
-=======
->>>>>>> 73aa164 (add code)
-
-    <div class="absolute w-[100%] h-[500px] bottom-1 bg-black  hidden z-40 left-0 px-3" id="AD_class1">
-        <div class="w-full h-full border border-white rounded-xl px-4">
-            <div class="flex items-center justify-between ">
-                <span class="close text-white text-[40px] " onclick="loadAd()">&times;</span>
-                <p class="text-red-700 font-medium">AD</p>
-            </div>
-            <script async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7245399426452385"
-                crossorigin="anonymous"></script>
-            <!-- inter -->
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7245399426452385"
-                data-ad-slot="8365366710" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-
+   <!-- ----- box ---- alert -->
+        <div
+            class=" hidden alert_box h-[150px] absolute  top-[50%] text-center w-full z-50 bg-black border border-white rounded-xl p-5  pr-10 left-0 right-0 mx-auto ">
+            <p class="text-gray-400 h-full flex items-center justify-center"> this will be apply to your account whitin
+                48 hours </p>
+            <span class="close text-white text-[35px] absolute top-[-10%] right-[2%] cursor-pointer"
+                onclick="alertshow()">&times;</span>
         </div>
-    </div>
+        =======
+        >>>>>>> 73aa164 (add code)
 
-    <script>
-        function alertprops() {
-<<<<<<< HEAD
-            let alert_box = document.querySelector(".alert_box");
-            alert_box.style.display = "block";
-            let blur = document.getElementById("blur");
-            blur.style.filter = "blur(5px)";
-        }
-        function alertshow() {
-            let alert_box = document.querySelector(".alert_box");
-            alert_box.style.display = "none";
-            blur.style.filter = "blur(0px)";
-=======
-            setTimeout(() => {
-                alert("this will be apply to your account whitin 48 hours");
-            }, 400);
->>>>>>> 73aa164 (add code)
-        }
+        <div class="absolute w-[100%] h-[500px] bottom-1 bg-black  hidden z-40 left-0 px-3" id="AD_class1">
+            <div class="w-full h-full border border-white rounded-xl px-4">
+                <div class="flex items-center justify-between ">
+                    <span class="close text-white text-[40px] " onclick="loadAd()">&times;</span>
+                    <p class="text-red-700 font-medium">AD</p>
+                </div>
+                <script async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7245399426452385"
+                    crossorigin="anonymous"></script>
+                <!-- inter -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7245399426452385"
+                    data-ad-slot="8365366710" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
 
-    </script>
-    <script src="adsctip.js"></script>
+            </div>
+        </div>
+
+        <script>
+            function alertprops() {
+                let alert_box = document.querySelector(".alert_box");
+                alert_box.style.display = "block";
+                let blur = document.getElementById("blur");
+                blur.style.filter = "blur(5px)";
+            }
+            function alertshow() {
+                let alert_box = document.querySelector(".alert_box");
+                alert_box.style.display = "none";
+                blur.style.filter = "blur(0px)";
+            }
+
+        </script>
+        <script src="adsctip.js"></script>
 </body>
 
 </html>
