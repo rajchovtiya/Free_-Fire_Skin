@@ -30,7 +30,7 @@
     }
 </style>
 
-<body class="bg-black">
+<body class="bg-black ">
 
     <div class="bg-black min-h-screen px-8 py-4" id="blur">
         <div class="flex items-center gap-1">
@@ -49,7 +49,7 @@
             <p id="text">To calculate your home loan EMI manually, use the following formula:</p>
         </div>
         <div class="flex items-end justify-center absolute bottom-3 w-full left-0">
-            <button class="bg-white w-[85%] h-14 rounded-xl relative   font-medium text-[20px] z-0" onclick="addshow()"
+            <button class="bg-white w-[85%] h-14 rounded-xl relative font-medium text-[20px] z-0" onclick="addshow()"
                 id="blur">Apply now</button>
         </div>
 
@@ -60,46 +60,58 @@
         <!-- Key Features -->
         <h2 class="text-[20px] font-bold text-blue-400 pb-3">Key Features & Benefits</h2>
         <ul class="list-disc list-inside pb-6 space-y-1 text-sm leading-relaxed">
-          <li>Welcome Benefit</li>
-          <li><b>HDFC Personal Loan:</b> 10.85% onwards p.a.</li>
-          <li><b>Axis Bank Personal Loan:</b> 11.25% onwards p.a.</li>
+            <li>Welcome Benefit</li>
+            <li><b>HDFC Personal Loan:</b> 10.85% onwards p.a.</li>
+            <li><b>Axis Bank Personal Loan:</b> 11.25% onwards p.a.</li>
         </ul>
-      
+
         <!-- Eligibility -->
         <h2 class="text-[20px] font-bold text-blue-400 pb-3">Who Can Apply for a Personal Loan?</h2>
         <ul class="list-disc list-inside pb-6 space-y-1 text-sm leading-relaxed">
-          <li>Age: 21 years to 60 years</li>
-          <li>Income: A steady income (₹25,000 per month or more is generally required)</li>
-          <li>Employment: Salaried, self-employed, or business owners</li>
-          <li>CIBIL Score: A score of 650 or above is ideal, but some lenders may approve loans with lower scores.</li>
+            <li>Age: 21 years to 60 years</li>
+            <li>Income: A steady income (₹25,000 per month or more is generally required)</li>
+            <li>Employment: Salaried, self-employed, or business owners</li>
+            <li>CIBIL Score: A score of 650 or above is ideal, but some lenders may approve loans with lower scores.
+            </li>
         </ul>
-      
+
         <!-- Benefits -->
         <h2 class="text-[20px] font-bold text-blue-400 pb-3">What Are the Benefits of a Personal Loan?</h2>
         <ul class="list-disc list-inside pb-6 space-y-3 text-sm leading-relaxed">
-          <li>No Collateral Required: You don’t need to give any property or valuables as security.</li>
-          <li>Flexibility: Use the loan for anything – medical bills, wedding expenses, home renovations, travel, etc.</li>
-          <li>Easy Repayments: Choose a loan tenure that works for you, with easy monthly installments.</li>
-          <li>Quick Disbursal: Once approved, the loan amount is transferred directly to your bank account within 24-48 hours.</li>
+            <li>No Collateral Required: You don’t need to give any property or valuables as security.</li>
+            <li>Flexibility: Use the loan for anything – medical bills, wedding expenses, home renovations, travel, etc.
+            </li>
+            <li>Easy Repayments: Choose a loan tenure that works for you, with easy monthly installments.</li>
+            <li>Quick Disbursal: Once approved, the loan amount is transferred directly to your bank account within
+                24-48 hours.</li>
         </ul>
-      
+
         <!-- Application Steps -->
         <h2 class="text-[20px] font-bold text-blue-400 pb-3">How to Apply for a Personal Loan?</h2>
         <ul class="list-disc list-inside pb-6 space-y-3 text-sm leading-relaxed">
-          <li>Fill Out the Application: Provide your basic details and income information.</li>
-          <li>Check Your Eligibility: Based on your profile, we will show you the best loan offers.</li>
-          <li>Submit Documents: Upload simple documents like your ID proof, address proof, and income proof.</li>
-          <li>Get Approved: After review, get quick approval and the loan amount disbursed directly to your account.</li>
+            <li>Fill Out the Application: Provide your basic details and income information.</li>
+            <li>Check Your Eligibility: Based on your profile, we will show you the best loan offers.</li>
+            <li>Submit Documents: Upload simple documents like your ID proof, address proof, and income proof.</li>
+            <li>Get Approved: After review, get quick approval and the loan amount disbursed directly to your account.
+            </li>
         </ul>
-      
+
         <!-- Car Loan Info -->
-        <h2 class="text-[20px] font-bold text-blue-400 pb-3">Compare Car Loans in India – Best Car Loan Rates for 2024</h2>
+        <h2 class="text-[20px] font-bold text-blue-400 pb-3">Compare Car Loans in India – Best Car Loan Rates for 2024
+        </h2>
         <p class="pb-6 text-sm leading-relaxed">
-          Looking to buy your dream car? Compare car loan schemes from top banks in India, including SBI, ICICI, HDFC, and others. Find the best interest rates, processing fees, and loan tenures to suit your needs.
+            Looking to buy your dream car? Compare car loan schemes from top banks in India, including SBI, ICICI, HDFC,
+            and others. Find the best interest rates, processing fees, and loan tenures to suit your needs.
         </p>
-      
-      </div>
-      
+
+    </div>
+    <!-- ----- box ---- alert -->
+    <div class=" hidden alert_box  absolute  top-[50%]   text-center w-full z-50 bg-black border border-white rounded-xl p-5 pr-10 left-0 right-0 mx-auto">
+        <p class="text-gray-400"> this will be apply to your account whitin 48 hours </p>
+        <span class="close text-white text-[35px] absolute top-[-15%] right-[2%] cursor-pointer" onclick="alertshow()">&times;</span>
+
+    </div>
+
 
     <div class="absolute w-[100%] h-[500px] bottom-1 bg-black hidden  z-40 left-0 px-3" id="AD_class1">
         <div class="w-full h-full border border-white rounded-xl px-4">
@@ -116,16 +128,19 @@
         let blur = document.getElementById("blur");
 
         function loadAd() {
-            console.log("this is a test");
             let adContainer = document.getElementById("AD_class1");
             adContainer.style.display = "none";
-            blur.style.filter = "blur(0px)";
-            setTimeout(() => {
-                alert("this will be apply to your account whitin 48 hours");
-            }, 300);
+            let alert_box = document.querySelector(".alert_box");
+            alert_box.style.display = "block";
 
 
         }
+        function alertshow() {
+            let alert_box = document.querySelector(".alert_box");
+            alert_box.style.display = "none";
+            blur.style.filter = "blur(0px)";
+        }
+
         function addshow() {
             let adContainer = document.getElementById("AD_class1");
             adContainer.style.display = "block";

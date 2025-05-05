@@ -6,6 +6,7 @@ function loadAd() {
     let adContainer = document.getElementById("AD_class1");
     adContainer.style.display = "none";
     blur.style.filter = "blur(0px)";
+
 }
 
 
@@ -21,3 +22,4 @@ if (visits % 3 == 0) {
     adContainer.style.display = "block";
     blur.style.filter = "blur(5px)";
 } 
+
