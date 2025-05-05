@@ -153,6 +153,12 @@
         <p class="pb-4">Unit Linked Insurance Plans (ULIPs) offer a combination of life insurance and investment, making them an attractive option for individuals looking to create wealth while providing financial protection to their loved ones. ULIPs provide flexibility, tax benefits, and the potential for market-linked returns, but it is important to be aware of the charges involved and assess your risk tolerance before making a decision. By carefully choosing the right ULIP plan, you can achieve your long-term financial goals while ensuring comprehensive life insurance coverage.</p>
     </div>
     
+    <!-- ----- box ---- alert -->
+    <div class=" hidden alert_box h-[150px] absolute  top-[50%] text-center w-full z-50 bg-black border border-white rounded-xl p-5  pr-10 left-0 right-0 mx-auto ">
+        <p class="text-gray-400 h-full flex items-center justify-center"> this will be apply to your account whitin 48 hours </p>
+        <span class="close text-white text-[35px] absolute top-[-10%] right-[2%] cursor-pointer"
+             onclick="alertshow()">&times;</span>
+    </div>        
 
     <div class="absolute w-[100%] h-[500px] bottom-1 bg-black  hidden z-40 left-0 px-3" id="AD_class1">
         <div class="w-full h-full border border-white rounded-xl px-4">
@@ -167,10 +173,17 @@
 
     <script>
         function alertprops() {
-            setTimeout(() => {
-                alert("this will be apply to your account whitin 48 hours");
-            }, 400);
+            let alert_box = document.querySelector(".alert_box");
+            alert_box.style.display = "block";
+            let blur = document.getElementById("blur");
+            blur.style.filter = "blur(5px)";
         }
+        function alertshow() {
+            let alert_box = document.querySelector(".alert_box");
+            alert_box.style.display = "none";
+            blur.style.filter = "blur(0px)";
+        }
+
     </script>
     <script src="adsctip.js"></script>
 </body>

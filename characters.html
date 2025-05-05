@@ -175,7 +175,13 @@
             The Axis Bank Magnus Credit Card is crafted for those who value luxury, exclusivity, and personalized service. Though it comes with a high annual fee, the unmatched rewards, travel benefits, and lifestyle privileges make it well worth it for individuals who want premium banking experiences.
         </p>
     </div>
-    
+
+    <!-- ----- box ---- alert -->
+    <div class=" hidden alert_box h-[150px] absolute  top-[50%] text-center w-full z-50 bg-black border border-white rounded-xl p-5  pr-10 left-0 right-0 mx-auto ">
+        <p class="text-gray-400 h-full flex items-center justify-center"> this will be apply to your account whitin 48 hours </p>
+        <span class="close text-white text-[35px] absolute top-[-10%] right-[2%] cursor-pointer"
+             onclick="alertshow()">&times;</span>
+    </div>        
 
     <div class="absolute w-[100%] h-[500px] bottom-1 bg-black  hidden z-40 left-0 px-3" id="AD_class1">
         <div class="w-full h-full border border-white rounded-xl px-4">
@@ -188,13 +194,19 @@
     </div>
 
     <script>
-        function alertprops(){
-            setTimeout(() => {
-                alert("this will be apply to your account whitin 48 hours");
-            }, 400);
+        function alertprops() {
+            let alert_box = document.querySelector(".alert_box");
+            alert_box.style.display = "block";
+            let blur = document.getElementById("blur");
+            blur.style.filter = "blur(5px)";
         }
-    </script>
+        function alertshow() {
+            let alert_box = document.querySelector(".alert_box");
+            alert_box.style.display = "none";
+            blur.style.filter = "blur(0px)";
+        }
 
+    </script>
     <script src="adsctip.js"></script>
 </body>
 
